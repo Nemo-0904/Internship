@@ -1,0 +1,7 @@
+/* src/styles/MediaPipeController.css */
+
+/* Hidden elements for MediaPipe processing in recorded mode */
+.mediapipe-hidden-video,
+.mediapipe-hidden-canvas {
+    display: none;
+}

@@ -1,0 +1,98 @@
+//*NO CSS USED*/
+/* src/styles/VideoRecorder.css */
+
+/* Define CSS variables for consistent theming */
+:root {
+    --dark-bg-secondary: #1f2937;
+    /* Tailwind gray-800 equivalent */
+    --dark-text-light: #f9fafb;
+    /* Tailwind gray-50 equivalent */
+
+    --button-start-bg: #10b981;
+    /* Tailwind green-500 */
+    --button-start-bg-hover: #059669;
+    /* Tailwind green-600 */
+    --button-stop-bg: #ef4444;
+    /* Tailwind red-500 */
+    --button-stop-bg-hover: #dc2626;
+    /* Tailwind red-600 */
+    --button-play-bg: #8b5cf6;
+    /* Tailwind purple-500 */
+    --button-play-bg-hover: #7c3aed;
+    /* Tailwind purple-600 */
+    --button-save-bg: #3b82f6;
+    /* Tailwind blue-500 */
+    --button-save-bg-hover: #2563eb;
+    /* Tailwind blue-600 */
+
+    --button-disabled-bg: #6b7280;
+    /* Tailwind gray-500 */
+    --button-disabled-text: #d1d5db;
+    /* Tailwind gray-300 */
+}
+
+.video-recorder-container {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-light);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* space-y-2 (8px gap between flex items) */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.recorder-button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: white;
+    /* Default text color for these specific buttons */
+}
+
+/* Specific button colors and hover effects */
+.recorder-button.start {
+    background-color: var(--button-start-bg);
+}
+
+.recorder-button.start:hover:not(:disabled) {
+    background-color: var(--button-start-bg-hover);
+}
+
+.recorder-button.stop {
+    background-color: var(--button-stop-bg);
+}
+
+.recorder-button.stop:hover:not(:disabled) {
+    background-color: var(--button-stop-bg-hover);
+}
+
+.recorder-button.play {
+    background-color: var(--button-play-bg);
+}
+
+.recorder-button.play:hover:not(:disabled) {
+    background-color: var(--button-play-bg-hover);
+}
+
+.recorder-button.save {
+    background-color: var(--button-save-bg);
+}
+
+.recorder-button.save:hover:not(:disabled) {
+    background-color: var(--button-save-bg-hover);
+}
+
+/* Disabled state for all buttons */
+.recorder-button:disabled {
+    background-color: var(--button-disabled-bg);
+    color: var(--button-disabled-text);
+    cursor: not-allowed;
+    box-shadow: none;
+}

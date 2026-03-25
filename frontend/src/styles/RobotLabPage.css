@@ -1,0 +1,235 @@
+/* --- Color Palette Variables (matching About Us section) --- */
+:root {
+    --primary-bg-dark: #1A232F;
+    /* Deep almost black */
+    --secondary-bg-dark: #08101C;
+    /* Even darker, for gradients */
+    --surface-bg-dark: #2d3748;
+    /* Slightly lighter dark gray for components */
+    --border-dark: #4a5568;
+    /* Dark gray-blue for borders */
+    --text-light: #E0E0E0;
+    /* Light text for readability */
+    --text-white: #F8F8F8;
+    /* Pure white for headings/important text */
+    --text-soft: #B0B0B0;
+    /* Softer white for paragraph text */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    /* Base shadow color */
+    --hover-shadow-color: rgba(0, 0, 0, 0.4);
+    /* Enhanced shadow on hover */
+}
+
+.robot-lab-page {
+    display: flex;
+    flex-direction: column;
+    /* Default to column layout for smaller screens */
+    min-height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    font-family: 'Inter', sans-serif;
+    /* Consistent font */
+    color: var(--text-light);
+    /* Light text color */
+    overflow: hidden;
+    /* Prevent body scroll if child elements cause it */
+
+    /* Gradient background similar to About Us section */
+    background: linear-gradient(135deg, var(--primary-bg-dark) 0%, var(--secondary-bg-dark) 100%);
+    position: relative;
+    /* For the background pattern */
+}
+
+/* Subtle background pattern (matching About Us section) */
+.robot-lab-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    /* Adjust for desired subtlety */
+    z-index: 1;
+    /* Ensures pattern is behind content */
+    pointer-events: none;
+    /* Allows clicks to pass through */
+}
+
+/* Ensure content is above the background pattern */
+.robot-lab-page>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Control Panel (Left Side) --- */
+.control-panel-container {
+    width: 100%;
+    /* Full width on small screens */
+    padding: 1rem;
+    overflow-y: auto;
+    /* Allow scrolling if content overflows */
+    flex-shrink: 0;
+    /* Prevent it from shrinking */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    background-color: var(--surface-bg-dark);
+    /* Use the surface color */
+    border-bottom: 1px solid var(--border-dark);
+    /* Add a subtle border */
+    box-shadow: 0 4px 15px var(--shadow-color);
+    /* Add a shadow */
+}
+
+/* Custom scrollbar for better aesthetics (matching About Us feel) */
+.control-panel-container.custom-scrollbar {
+
+    /* For WebKit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--surface-bg-dark);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--border-dark);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #5a657b;
+        /* Slightly lighter on hover */
+    }
+
+    /* For Firefox (requires 'scrollbar-width' and 'scrollbar-color') */
+    scrollbar-width: thin;
+    /* "auto" or "thin" */
+    scrollbar-color: var(--border-dark) var(--surface-bg-dark);
+    /* thumb and track color */
+}
+
+/* --- Robot Model Visualization (Right Side) --- */
+.robot-model-container {
+    flex-grow: 1;
+    /* Allows this section to take up remaining space */
+    padding: 1.5rem;
+    /* Slightly more padding for the main visual */
+    background-color: transparent;
+    /* Main content area will show the page background */
+    display: flex;
+    /* Make it a flex container to center its child */
+    flex-direction: column;
+    /* Arrange children in a column */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+}
+
+.robot-model-visualizer {
+    flex: 1;
+    /* Takes all available space within its parent */
+    width: 100%;
+    /* Ensure it takes full width within its flex container */
+    max-width: 900px;
+    /* Limit max width for large screens for better proportions */
+    height: 100%;
+    /* Take full height available */
+    min-height: 300px;
+    /* Ensure a minimum height for the viewer */
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 10px 25px var(--shadow-color);
+    /* Stronger, more pronounced shadow */
+    border: 1px solid var(--border-dark);
+    /* Subtle border */
+    background-color: var(--surface-bg-dark);
+    /* Background for the viewer itself */
+    overflow: hidden;
+    /* Crucial for 3D viewer if it has internal elements */
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transition for hover */
+}
+
+.robot-model-visualizer:hover {
+    transform: translateY(-5px) scale(1.005);
+    /* Subtle lift and slight scale on hover */
+    box-shadow: 0 15px 35px var(--hover-shadow-color);
+    /* Enhanced shadow on hover */
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens larger than 1024px (laptops/desktops) */
+@media (min-width: 1024px) {
+    .robot-lab-page {
+        flex-direction: row;
+        /* Switch to row layout */
+    }
+
+    .control-panel-container {
+        width: 650px;
+        /* Fixed width for control panel on large screens */
+        height: 100vh;
+        /* Full viewport height */
+        border-bottom: none;
+        /* Remove bottom border */
+        border-right: 1px solid var(--border-dark);
+        /* Add right border */
+        box-shadow: 4px 0 15px var(--shadow-color);
+        /* Adjust shadow direction */
+    }
+
+    .robot-model-container {
+        flex-grow: 1;
+        /* Takes remaining space */
+        padding: 2rem;
+        /* More generous padding */
+    }
+}
+
+/* For screens smaller than 768px (tablets/mobile in portrait) */
+@media (max-width: 768px) {
+    .robot-lab-page {
+        padding: 0;
+        /* Remove overall padding if any */
+    }
+
+    .control-panel-container {
+        padding: 15px;
+        /* Adjust padding for mobile */
+        min-height: auto;
+        /* Allow height to adjust to content */
+    }
+
+    .robot-model-container {
+        padding: 1rem;
+        /* Adjust padding for mobile */
+        min-height: 400px;
+        /* Ensure visibility for the model on mobile */
+    }
+
+    .robot-model-visualizer {
+        min-height: 250px;
+        /* Reduce min height for very small screens */
+    }
+}
+
+/* For very small screens (e.g., small phones) */
+@media (max-width: 480px) {
+
+    .control-panel-container,
+    .robot-model-container {
+        padding: 10px;
+        /* Further reduce padding */
+    }
+}
+

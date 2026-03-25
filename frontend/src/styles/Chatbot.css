@@ -1,0 +1,318 @@
+:root {
+    --chat-primary: #007bff;
+    --chat-gradient-start: #4facfe;
+    --chat-gradient-end: #00f2fe;
+    --chat-bg: #ffffff;
+    --chat-text: #333333;
+    --chat-radius: 20px;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+}
+
+.chatbot-wrapper {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+/* 🌟 Floating Toggle Button */
+.chat-toggle {
+    background: linear-gradient(135deg, var(--chat-gradient-start), var(--chat-gradient-end));
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px var(--shadow-color);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    animation: pulse-glow 2s infinite;
+}
+
+.chat-toggle:hover {
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 242, 254, 0.4);
+}
+
+/* Pulse Animation for Toggle */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(79, 172, 254, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(79, 172, 254, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 172, 254, 0);
+    }
+}
+
+/* 🖼️ Chat Container Container */
+.chatbot {
+    width: 380px;
+    max-width: calc(100vw - 48px);
+    height: 550px;
+    max-height: calc(100vh - 100px);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: var(--chat-radius);
+    box-shadow: 0 20px 50px var(--shadow-color), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform-origin: bottom right;
+}
+
+/* Open/Close Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.chatbot-wrapper.closed .chatbot {
+    display: none;
+}
+
+/* 🏷️ Header */
+.chatbot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--chat-gradient-start), var(--chat-gradient-end));
+    color: white;
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.header-title i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* 💬 Chat Area */
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #f8fbff;
+}
+
+/* Message Bubbles */
+.user,
+.bot {
+    max-width: 80%;
+    word-wrap: break-word;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    animation: fadeInMsg 0.3s ease forwards;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes fadeInMsg {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user {
+    align-self: flex-end;
+    background: linear-gradient(135deg, var(--chat-gradient-start), var(--chat-gradient-end));
+    color: white;
+    border-radius: 20px 20px 4px 20px;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #ffffff;
+    color: var(--chat-text);
+    border-radius: 20px 20px 20px 4px;
+    border: 1px solid #eef2f6;
+}
+
+/* Thinking Indicator */
+.bot.thinking {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    color: #888;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bot.thinking i {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ⌨️ Input Area */
+.input-area {
+    display: flex;
+    padding: 16px;
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    align-items: center;
+    gap: 10px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 14px 20px;
+    font-size: 14px;
+    background: #f0f4f8;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s ease;
+    color: var(--chat-text);
+}
+
+.input-area input:focus {
+    background: #ffffff;
+    border-color: var(--chat-gradient-start);
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.15);
+}
+
+.input-area input::placeholder {
+    color: #a0aec0;
+}
+
+.input-btn {
+    background: linear-gradient(135deg, var(--chat-gradient-start), var(--chat-gradient-end));
+    color: white;
+    border: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.input-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(79, 172, 254, 0.4);
+}
+
+.input-btn:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .chatbot {
+        width: 100%;
+        height: 80vh;
+        border-radius: 24px 24px 0 0;
+    }
+
+    .chatbot-wrapper {
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .chatbot-wrapper.closed {
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+    }
+}
+
+/* 📝 Markdown Styles inside Bot Bubbles */
+.bot p {
+    margin: 0 0 8px 0;
+}
+
+.bot p:last-child {
+    margin-bottom: 0;
+}
+
+.bot ul,
+.bot ol {
+    margin: 4px 0 8px 0;
+    padding-left: 20px;
+}
+
+.bot li {
+    margin-bottom: 4px;
+}
+
+.bot strong {
+    font-weight: 600;
+    color: #111;
+}
+
+.bot pre,
+.bot code {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.bot pre {
+    padding: 8px;
+    overflow-x: auto;
+}

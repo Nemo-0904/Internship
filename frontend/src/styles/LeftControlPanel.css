@@ -1,0 +1,378 @@
+/* --- Color Palette Variables (matching RobotLabPage.css and About Us theme) --- */
+/* These should ideally be defined once in a global stylesheet or imported if your build system allows */
+:root {
+    --primary-bg-dark: #1A232F;
+    /* Deep almost black */
+    --secondary-bg-dark: #08101C;
+    /* Even darker, for gradients */
+    --surface-bg-dark: #2d3748;
+    /* Slightly lighter dark gray for components/panels */
+    --border-dark: #4a5568;
+    /* Dark gray-blue for borders */
+    --text-light: #E0E0E0;
+    /* Light text for readability */
+    --text-white: #F8F8F8;
+    /* Pure white for headings/important text */
+    --text-soft: #B0B0B0;
+    /* Softer white for paragraph text */
+    --text-muted: #9ca3af;
+    /* Gray for subtle text like file info */
+    --accent-blue: #3b82f6;
+    /* A vibrant blue for accents */
+    --accent-blue-hover: #2563eb;
+    /* Darker blue on hover */
+    --green-action: #22c55e;
+    /* Green for 'start' actions */
+    --green-action-hover: #16a34a;
+    --red-action: #ef4444;
+    /* Red for 'stop' actions */
+    --red-action-hover: #dc2626;
+    --blue-action: #3b82f6;
+    /* Blue for 'save' actions */
+    --blue-action-hover: #2563eb;
+    --purple-action: #9333ea;
+    /* Purple for 'play' actions */
+    --purple-action-hover: #7e22ce;
+    --disabled-bg: #6b7280;
+    /* Gray for disabled elements background */
+    --disabled-text: #d1d5db;
+    /* Light gray for disabled text */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    /* Base shadow color */
+    --hover-shadow-color: rgba(0, 0, 0, 0.4);
+    /* Enhanced shadow on hover */
+}
+
+.left-control-panel {
+    /* flex-col h-full sidebar-always-scroll */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Take full height of its parent (RobotLabPage) */
+    width: 100%;
+    /* Default to full width on small screens */
+    padding: 1.25rem;
+    /* Equivalent to p-5 */
+    background-color: var(--primary-bg-dark);
+    /* Matches the main page background */
+    color: var(--text-light);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    /* Stronger shadow for the sidebar */
+    box-sizing: border-box;
+    /* Include padding in width/height */
+}
+
+.panel-title {
+    /* text-2xl font-bold text-dark-accent-blue mb-4 flex-shrink-0 text-center */
+    font-size: 1.5rem;
+    /* 2xl equivalent */
+    font-weight: 700;
+    /* bold equivalent */
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    /* mb-4 equivalent */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+    text-align: center;
+}
+
+.status-message {
+    /* bg-dark-bg-secondary p-3 rounded-lg shadow-md text-sm mb-4 flex-shrink-0 text-dark-text-muted */
+    background-color: var(--surface-bg-dark);
+    /* Matches surface-bg-dark */
+    padding: 0.75rem;
+    /* p-3 equivalent */
+    border-radius: 0.5rem;
+    /* rounded-lg equivalent */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* shadow-md equivalent */
+    font-size: 0.875rem;
+    /* text-sm equivalent */
+    margin-bottom: 1rem;
+    /* mb-4 equivalent */
+    flex-shrink: 0;
+    color: var(--text-muted);
+}
+
+.panel-content-scroll-area {
+    /* flex-grow min-h-0 overflow-y-scroll pr-1 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-dark-bg-primary */
+    flex-grow: 1;
+    /* Allows it to take up remaining vertical space */
+    min-height: 0;
+    /* Important for flex items with overflow */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding-right: 0.25rem;
+    /* pr-1 equivalent */
+
+    /* Custom scrollbar styles (matching RobotLabPage.css) */
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: var(--border-dark) var(--primary-bg-dark);
+    /* thumb and track */
+}
+
+.panel-content-scroll-area::-webkit-scrollbar {
+    width: 8px;
+    /* For Chrome, Safari, Edge */
+}
+
+.panel-content-scroll-area::-webkit-scrollbar-track {
+    background: var(--primary-bg-dark);
+    /* scrollbar-track-dark-bg-primary */
+    border-radius: 10px;
+}
+
+.panel-content-scroll-area::-webkit-scrollbar-thumb {
+    background-color: var(--border-dark);
+    /* scrollbar-thumb-gray-600 */
+    border-radius: 10px;
+    border: 2px solid var(--primary-bg-dark);
+    /* Padding around the thumb */
+}
+
+/* --- Camera & Recording Section Specifics --- */
+.section-subtitle {
+    /* text-dark-text-light text-lg mb-2 text-center */
+    color: var(--text-light);
+    font-size: 1.125rem;
+    /* text-lg equivalent */
+    margin-bottom: 0.5rem;
+    /* mb-2 equivalent */
+    text-align: center;
+    font-weight: 600;
+    /* Added for better hierarchy */
+}
+
+.camera-feed-container,
+.recorded-preview-container {
+    /* relative w-full aspect-video rounded-lg overflow-hidden bg-dark-bg-dark flex items-center justify-center mb-4 */
+    position: relative;
+    width: 100%;
+    /* aspect-video (16/9) */
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio (9 / 16 * 100%) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    /* rounded-lg equivalent */
+    background-color: var(--secondary-bg-dark);
+    /* bg-dark-bg-dark equivalent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    /* mb-4 equivalent */
+    box-shadow: 0 4px 10px var(--shadow-color);
+    /* Added shadow for consistency */
+}
+
+.camera-video-stream,
+.recorded-video-player {
+    /* absolute inset-0 w-full h-full object-cover */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+    /* Ensure black background for video */
+    border-radius: inherit;
+    /* Inherit border-radius from container */
+}
+
+.mediapipe-canvas {
+    /* position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 2, pointerEvents: "none" */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: inherit;
+    /* Inherit border-radius from container */
+}
+
+.recording-buttons-group {
+    /* flex flex-col space-y-2 mb-4 */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* space-y-2 equivalent */
+    margin-bottom: 1rem;
+    /* mb-4 equivalent */
+}
+
+.action-button {
+    /* py-2 px-4 rounded-md text-white font-semibold transition-colors duration-200 */
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    /* rounded-md */
+    color: white;
+    font-weight: 600;
+    /* font-semibold */
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for buttons */
+}
+
+.action-button.start-recording {
+    background-color: var(--green-action);
+}
+
+.action-button.start-recording:hover {
+    background-color: var(--green-action-hover);
+}
+
+.action-button.stop-recording {
+    background-color: var(--red-action);
+}
+
+.action-button.stop-recording:hover {
+    background-color: var(--red-action-hover);
+}
+
+.action-button.save-recording {
+    background-color: var(--blue-action);
+}
+
+.action-button.save-recording:hover {
+    background-color: var(--blue-action-hover);
+}
+
+.action-button.play-recorded {
+    background-color: var(--purple-action);
+}
+
+.action-button.play-recorded:hover {
+    background-color: var(--purple-action-hover);
+}
+
+.action-button.disabled {
+    background-color: var(--disabled-bg);
+    color: var(--disabled-text);
+    cursor: not-allowed;
+    opacity: 0.7;
+    /* Slightly dim disabled buttons */
+    box-shadow: none;
+    /* No shadow when disabled */
+}
+
+.no-recording-message {
+    /* text-center text-dark-text-medium */
+    text-align: center;
+    color: var(--text-muted);
+    /* Using text-muted for this message */
+    position: absolute;
+    /* Center within aspect ratio container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    /* Prevent text from touching edges */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 1024px (tablets/mobile) */
+@media (max-width: 1023px) {
+    .left-control-panel {
+        padding: 1rem;
+        /* Adjust padding for smaller screens */
+        /* The width will be 100% due to RobotLabPage's flex-direction: column */
+        height: auto;
+        /* Allow height to be determined by content */
+        border-bottom: 1px solid var(--border-dark);
+        /* Add a border at the bottom */
+        box-shadow: 0 2px 10px var(--shadow-color);
+        /* Adjust shadow for bottom */
+    }
+
+    .panel-title {
+        font-size: 1.3rem;
+        /* Smaller title on mobile */
+        margin-bottom: 0.75rem;
+    }
+
+    .status-message {
+        padding: 0.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .panel-content-scroll-area {
+        padding-right: 0;
+        /* Remove right padding for scrollbar on mobile */
+    }
+
+    .camera-feed-container,
+    .recorded-preview-container {
+        margin-bottom: 0.75rem;
+    }
+
+    .action-button {
+        padding: 0.4rem 0.8rem;
+        /* Slightly smaller buttons */
+        font-size: 0.9rem;
+    }
+}
+
+/* For very small screens (e.g., small phones) */
+@media (max-width: 480px) {
+    .left-control-panel {
+        padding: 0.75rem;
+    }
+
+    .panel-title {
+        font-size: 1.2rem;
+    }
+
+    .status-message {
+        font-size: 0.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .action-button {
+        font-size: 0.85rem;
+    }
+}
+
+.upload-section {
+    margin-top: 10px;
+    padding: 10px;
+    background: #222;
+    border-radius: 4px;
+}
+
+.upload-section label {
+    display: block;
+    margin: 5px 0;
+    color: #fff;
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-section button {
+    display: block;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.panel-content-scroll-area {
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}

@@ -1,0 +1,2143 @@
+/*
+ * General Imports & Resets (if not already handled globally)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+/* Example: Importing a modern font */
+
+/* GLOBAL RESET - Ensure these are applied once globally */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    /* CORRECTED: Dark background and light text for global default */
+    background: linear-gradient(135deg, #08101C 0%, #1A232F 100%);
+    /* Consistent dark gradient */
+    color: #E0E0E0;
+    /* Light text for general body */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */}
+
+/*
+  * HERO SECTION STYLES
+  */
+.hero {
+    /* Background: Dark gradient for a sleek, futuristic look */
+    background: linear-gradient(135deg, #1A232F 0%, #08101C 100%);
+    color: #E0E0E0;
+    /* Default text color for the hero section */
+    padding: 150px 20px;
+    /* Top/bottom padding for vertical spacing, horizontal for small screens */
+    text-align: center;
+    /* Center-align all content */
+    position: relative;
+    /* For potential pseudo-elements or absolute positioning */
+    overflow: hidden;
+    /* Ensures any child elements (like background patterns) stay within bounds */
+}
+
+/* Optional: Subtle background pattern for texture */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Subtle geometric pattern (example SVG, you can use an actual image if preferred) */
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    /* Adjust for desired subtlety */
+    z-index: 1;
+    /* Ensures pattern is behind content */
+}
+
+/* Hero Content Wrapper for max-width and centering */
+.hero-content {
+    position: relative;
+    /* Ensures content is above the pseudo-element background */
+    z-index: 2;
+    /* Higher z-index to be on top of the background pattern */
+    max-width: 900px;
+    /* Limits the content width for better readability on large screens */
+    margin: 0 auto;
+    /* Centers the content block horizontally */
+    padding: 0 20px;
+    /* Adds horizontal padding inside the wrapper for smaller screens */
+}
+
+/* Main Heading (H1) */
+.hero-title {
+    font-size: 3.8rem;
+    /* Large font for primary message */
+    line-height: 1.1;
+    /* Tighter line height for large headings */
+    margin-bottom: 25px;
+    /* Space below the title */
+    font-weight: 700;
+    /* Bold text for impact */
+    color: #F8F8F8;
+    /* Bright white for high contrast */
+}
+
+/* Tagline (H2) */
+.hero-tagline {
+    font-size: 1.8rem;
+    /* Slightly smaller than H1, but prominent */
+    line-height: 1.3;
+    margin-bottom: 30px;
+    /* Space below the tagline */
+    font-weight: 500;
+    /* Medium weight for good readability */
+    color: #BAD6EB;
+    /* A soft blue-white for visual interest and contrast */
+}
+
+/* Description Paragraph */
+.hero-description {
+    font-size: 1.1rem;
+    /* Standard readable text size */
+    line-height: 1.6;
+    /* Comfortable line height for paragraphs */
+    margin-bottom: 40px;
+    /* More space before the call to action button */
+    color: #B0B0B0;
+    /* Slightly desaturated gray for secondary information */
+    max-width: 700px;
+    /* Limits paragraph width for readability */
+    margin-left: auto;
+    /* Centers the paragraph within its container */
+    margin-right: auto;
+    /* Centers the paragraph within its container */
+}
+
+/* Call to Action Button */
+.cta-btn {
+    /* CORRECTED: Use the consistent accent blue */
+    background-color: #60a5fa;
+    /* Vibrant blue for a primary action */
+    color: #FFFFFF;
+    /* White text for high contrast on the blue button */
+    padding: 15px 30px;
+    /* Generous padding for a clickable area */
+    border-radius: 5px;
+    /* Slightly rounded corners, modern look */
+    text-decoration: none;
+    /* Removes underline from link */
+    font-weight: 600;
+    /* Bolder text for emphasis */
+    font-size: 1.1rem;
+    /* Readable font size for a button */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    display: inline-block;
+    /* Allows padding, margin, transform to work correctly */
+    /* CORRECTED: Shadow consistent with accent blue */
+    box-shadow: 0 4px 10px rgba(96, 165, 250, 0.3);
+    /* Subtle shadow for depth */
+}
+
+.cta-btn:hover {
+    /* CORRECTED: Darker accent blue on hover */
+    background-color: #4f8cf0;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Lifts the button slightly */
+    /* CORRECTED: Enhanced shadow consistent with accent blue */
+    box-shadow: 0 6px 15px rgba(96, 165, 250, 0.6);
+    /* Enlarged shadow on hover */
+}
+
+/*
+  * Media Queries for Responsiveness (adjust values as needed)
+  */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 15px;
+        /* Less padding on smaller screens */
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+        /* Smaller H1 on mobile */
+        margin-bottom: 20px;
+    }
+
+    .hero-tagline {
+        font-size: 1.5rem;
+        /* Smaller H2 on mobile */
+        margin-bottom: 25px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        /* Smaller body text on mobile */
+        margin-bottom: 30px;
+    }
+
+    .cta-btn {
+        padding: 12px 25px;
+        /* Slightly smaller button on mobile */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+        /* Even smaller for very small screens */
+    }
+
+    .hero-tagline {
+        font-size: 1.3rem;
+    }}
+
+  /* === ABOUT SECTION STYLES === */
+  .about-us-section {
+      /* Gradient background similar to Hero, but slightly different for distinction */
+    background: linear-gradient(135deg, #1A232F 0%, #08101C 100%);
+      /* Adjusted dark gradient */
+      color: #E0E0E0;
+      /* Light text color for contrast */
+      padding: 80px 20px;
+      /* Generous padding for vertical spacing */
+      position: relative;
+      /* For potential pseudo-elements or absolute positioning */
+      overflow: hidden;
+      /* Ensures content stays within bounds */
+      font-family: 'Inter', sans-serif;
+      /* Consistent font */
+      line-height: 1.6;
+      /* Readable line height */
+  }
+
+  /* Optional: Subtle background pattern for texture (matching Hero) */
+  .about-us-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+      background-repeat: repeat;
+      opacity: 0.1;
+      /* Adjust for desired subtlety */
+      z-index: 1;
+      /* Ensures pattern is behind content */
+  }
+
+  .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* Allows columns to wrap on smaller screens */
+      max-width: 1200px;
+      /* Limits content width */
+      margin: auto;
+      /* Centers the container */
+      gap: 60px;
+      /* Space between text and image columns */
+      align-items: center;
+      /* Vertically aligns items in the center */
+      position: relative;
+      /* Ensure content is above pseudo-element */
+      z-index: 2;
+      /* Higher z-index to be on top of the background pattern */
+  }
+
+  .about-text {
+      flex: 1 1 55%;
+      /* Text takes up about 55% width, can shrink/grow */
+      min-width: 300px;
+      /* Ensures text column doesn't get too narrow */
+      /* Add padding for better spacing on smaller screens if flex item is too wide */
+      padding-right: 20px;
+      /* Add some space if image is immediately next */
+  }
+
+  /* Responsive adjustment for padding on smaller screens */
+  @media (max-width: 768px) {
+      .about-text {
+          padding-right: 0;
+          /* Remove extra padding on smaller screens */
+      }
+  }
+
+
+  .about-text h2 {
+      font-size: 2.8rem;
+      /* Larger, more impactful heading */
+      color: #F8F8F8;
+      /* White heading for contrast */
+      margin-bottom: 25px;
+      /* Space below heading */
+      font-weight: 700;
+      /* Bold */
+      line-height: 1.2;
+  }
+
+  @media (max-width: 768px) {
+      .about-text h2 {
+          font-size: 2.2rem;
+          /* Adjust for mobile */
+          text-align: center;
+          /* Center heading on mobile */
+      }
+  }
+
+
+  .about-text p {
+      font-size: 1.1rem;
+      /* Slightly larger text for readability */
+      color: #B0B0B0;
+      /* Softer white for paragraph text */
+      margin-bottom: 20px;
+      /* Space between paragraphs */
+      line-height: 1.7;
+      /* Increased line height for better readability */
+  }
+
+  .about-text p:last-of-type {
+      margin-bottom: 0;
+      /* No margin below the last paragraph */
+  }
+
+  .about-image {
+      flex: 1 1 35%;
+      /* Image takes up about 35% width, can shrink/grow */
+      display: flex;
+      /* Use flexbox to center image within its container */
+      justify-content: center;
+      /* Center image horizontally */
+      align-items: center;
+      /* Center image vertically */
+      padding: 10px;
+      /* Add some internal padding to image container */
+  }
+
+  @media (max-width: 768px) {
+      .about-image {
+          flex: 1 1 100%;
+          /* On small screens, image takes full width */
+          order: -1;
+          /* Puts image above text on mobile for better flow (optional) */
+          margin-bottom: 40px;
+          /* Add space between image and text on mobile */
+      }
+  }
+
+  .about-image img {
+      width: 100%;
+      /* Image fills its flex container */
+      max-width: 450px;
+      /* Max width for the image to prevent it from getting too large */
+      height: auto;
+      /* Maintain aspect ratio */
+      border-radius: 12px;
+      /* Rounded corners for the image */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      /* Stronger, more pronounced shadow */
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      /* Smooth transition for hover */
+      display: block;
+      /* Ensures no extra space below image */
+  }
+
+  .about-image img:hover {
+      transform: translateY(-5px) scale(1.02);
+      /* Slight lift and scale on hover */
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      /* Enhanced shadow on hover */
+  }
+
+
+  /* === Media Queries for About Section === */
+  @media (max-width: 1024px) {
+      .about-container {
+          gap: 40px;
+          /* Reduce gap on slightly smaller screens */
+      }
+  }
+
+  @media (max-width: 768px) {
+      .about-us-section {
+          padding: 60px 15px;
+          /* Adjust padding for tablets/mobile */
+      }
+
+      .about-container {
+          flex-direction: column;
+          /* Stack columns vertically on smaller screens */
+          text-align: center;
+          /* Center text content */
+      }
+
+      .about-text,
+      .about-image {
+          flex: 1 1 100%;
+          /* Each takes full width */
+          max-width: 100%;
+          /* Ensure max-width doesn't limit it incorrectly */
+          padding-right: 0;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .about-text h2 {
+          font-size: 1.8rem;
+          /* Further reduce heading size for very small screens */
+      }
+
+      .about-text p {
+          font-size: 1rem;
+          /* Further reduce paragraph size */
+      }
+  }
+
+
+/* === BLOG SECTION STYLES === */
+.blog-section {
+    background: linear-gradient(135deg, #1A232F 0%, #08101C 100%);
+    /* Dark gradient background */
+    color: #E0E0E0;
+    /* Light text color */
+    padding: 80px 20px;
+    /* Generous padding */
+    text-align: center;
+    /* Center align content */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Optional: Subtle background pattern for texture (consistent with Hero/About) */
+.blog-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.blog-section h2 {
+    font-size: 2.8rem;
+    /* Large heading */
+    color: #F8F8F8;
+    /* White heading */
+    margin-bottom: 50px;
+    /* More space below heading */
+    font-weight: 700;
+    line-height: 1.2;
+    position: relative;
+    /* Ensure heading is above pseudo-element */
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .blog-section h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+}
+
+.blog-grid {
+    display: grid;
+    /* Use CSS Grid for better control */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Responsive columns */
+    justify-content: center;
+    /* Center items if they don't fill the row */
+    gap: 40px;
+    /* Increased gap between cards */
+    max-width: 1200px;
+    /* Limit grid width */
+    margin: 0 auto;
+    /* Center the grid */
+    position: relative;
+    z-index: 2;
+}
+
+.blog-card {
+    background-color: #1A2E3F;
+    /* Darker background for cards */
+    border-radius: 12px;
+    /* More rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    /* Pronounced shadow */
+    overflow: hidden;
+    /* Ensures image corners are rounded */
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Smooth transitions */
+    display: flex;
+    /* Use flex for vertical layout of card content */
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    /* Lift card on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    /* More intense shadow on hover */
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    /* Fixed height for consistent image size */
+    object-fit: cover;
+    /* Ensures image covers the area, cropping if necessary */
+    border-top-left-radius: 12px;
+    /* Match card radius */
+    border-top-right-radius: 12px;
+    /* Match card radius */
+}
+
+.blog-card h3 {
+    padding: 20px 20px 10px;
+    /* Adjusted padding */
+    font-size: 1.4rem;
+    /* Larger title */
+    color: #BAD6EB;
+    /* Soft blue color for titles */
+    margin-bottom: 0;
+    /* Remove default margin from h3 */
+    line-height: 1.3;
+}
+
+.blog-card p {
+    padding: 0 20px 15px;
+    /* Adjusted padding */
+    font-size: 1rem;
+    /* Clearer paragraph text */
+    color: #B0B0B0;
+    /* Light gray for description */
+    flex-grow: 1;
+    /* Allows description to take available space */
+}
+
+.read-more {
+    display: inline-block;
+    padding: 15px 20px;
+    /* CORRECTED: Use the consistent accent blue */
+    background-color: #60a5fa;
+    /* Button background color */
+    color: #FFFFFF;
+    /* White text */
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.read-more:hover {
+    /* CORRECTED: Darker accent blue on hover */
+    background-color: #4f8cf0;
+    /* Darker blue on hover */
+}
+
+
+/* === SERVICES SECTION STYLES === */
+.services-section {
+    background: linear-gradient(135deg, #08101C 0%, #1A232F 100%);
+    color: #E0E0E0;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.services-section h2 {
+    font-size: 2.8rem;
+    color: #F8F8F8;
+    margin-bottom: 25px;
+    /* Reduced margin here */
+    font-weight: 700;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+/* NEW STYLES FOR THE INTRODUCTORY PARAGRAPH */
+.services-intro-paragraph {
+    font-size: 1.15rem;
+    /* Slightly larger text */
+    color: #B0B0B0;
+    /* Consistent light gray */
+    max-width: 800px;
+    /* Limit width for readability */
+    margin: 0 auto 50px auto;
+    /* Center and add space below */
+    line-height: 1.7;
+    /* Good line height for readability */
+    position: relative;
+    /* Ensure it's above the pseudo-element */
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .services-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .services-intro-paragraph {
+        font-size: 1rem;
+        /* Smaller on mobile */
+        margin-bottom: 40px;
+        padding: 0 10px;
+        /* Add slight horizontal padding */
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    background-color: #1A2E3F;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.service-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #60a5fa;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #9ca3af;
+    flex-grow: 1;
+}
+
+/* Responsive adjustments for service cards */
+@media (max-width: 480px) {
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* === MAIN FOOTER STYLES === */
+.main-footer {
+    background: linear-gradient(135deg, #0A141E 0%, #000000 100%);
+    color: #E0E0E0;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+    padding-top: 60px;
+    /* Padding for the top section */
+}
+
+.main-footer::before {
+    /* Consistent background pattern */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.footer-container {
+    display: grid;
+    /* Use CSS Grid for robust column layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Responsive columns */
+    gap: 40px;
+    /* Space between columns */
+    max-width: 1200px;
+    /* Max width for the footer content */
+    margin: 0 auto;
+    /* Center the footer content */
+    padding: 0 20px 40px;
+    /* Padding for columns, adjust bottom for footer-bottom */
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column {
+    padding: 10px;
+    /* Slight padding for column content */
+}
+
+.footer-column h3 {
+    font-size: 1.4rem;
+    color: #60a5fa;
+    /* Accent blue for headings */
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.footer-about p {
+    font-size: 0.95rem;
+    color: #B0B0B0;
+    line-height: 1.7;
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+    /* Space between links */
+}
+
+.footer-links ul li a {
+    color: #E0E0E0;
+    /* Light text for links */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #60a5fa;
+    /* Accent blue on hover */
+}
+
+/* Contact Info Column */
+.footer-contact-info p {
+    font-size: 0.95rem;
+    color: #B0B0B0;
+    margin-bottom: 12px;
+    display: flex;
+    /* Align icon and text */
+    align-items: flex-start;
+    /* Align icon to top of text */
+}
+
+.footer-contact-info p i {
+    margin-right: 10px;
+    /* Space between icon and text */
+    color: #60a5fa;
+    /* Accent color for icons */
+    font-size: 1.1rem;
+    margin-top: 3px;
+    /* Fine-tune icon vertical alignment */
+}
+
+.footer-contact-info p a {
+    color: #B0B0B0;
+    /* Keep email link color consistent */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-info p a:hover {
+    color: #60a5fa;
+    /* Accent blue on hover */
+}
+
+/* Social Buttons (re-styled for new context) */
+.footer-contact-info .social-buttons {
+    /* Target specifically within contact info */
+    display: flex;
+    justify-content: flex-start;
+    /* Align to the left in column */
+    margin-top: 30px;
+    /* Space above social icons */
+    margin-bottom: 0;
+    /* No bottom margin here, as footer-bottom handles it */
+}
+
+.footer-contact-info .social-btn {
+    color: #E0E0E0;
+    margin: 0 12px 0 0;
+    /* Adjusted spacing */
+    font-size: 1.5rem;
+    /* Slightly smaller for column */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-contact-info .social-btn:last-child {
+    margin-right: 0;
+    /* No margin on the last icon */
+}
+
+.footer-contact-info .social-btn:hover {
+    color: #60a5fa;
+    transform: translateY(-3px) scale(1.05);
+    /* Less pronounced hover than original footer */
+}
+
+
+/* Footer Bottom (Copyright Bar) */
+.footer-bottom {
+    background-color: #000000;
+    /* Solid black for the bottom bar */
+    padding: 20px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Subtle separator */
+    position: relative;
+    z-index: 2;
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    /* Slightly smaller copyright text */
+    color: #909090;
+    /* Darker gray for copyright */
+    opacity: 1;
+    /* Ensure full visibility */
+    margin: 0;
+    /* Remove default paragraph margin */
+}
+
+
+/* === Responsive Adjustments for Footer === */
+@media (max-width: 992px) {
+
+    /* Adjust grid for tablets */
+    .footer-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Stack columns on smaller screens */
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* Single column */
+        gap: 40px;
+        /* More space between stacked columns */
+        padding: 0 30px 40px;
+    }
+
+    .footer-column {
+        text-align: center;
+        /* Center content in stacked columns */
+    }
+
+    .footer-column h3 {
+        margin-bottom: 20px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-contact-info p {
+        justify-content: center;
+        /* Center contact details */
+    }
+
+    .footer-contact-info p i {
+        margin-top: 0;
+        /* Reset margin top for icons */
+    }
+
+    .footer-contact-info .social-buttons {
+        justify-content: center;
+        /* Center social buttons */
+        margin-top: 25px;
+    }
+
+    .footer-contact-info .social-btn {
+        margin: 0 10px;
+        /* Adjust spacing for centered icons */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Even smaller screens */
+    .main-footer {
+        padding-top: 40px;
+    }
+
+    .footer-container {
+        padding: 0 20px 30px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-about p,
+    .footer-links ul li a,
+    .footer-contact-info p,
+    .footer-copy {
+        font-size: 0.8rem;
+    }
+
+    .footer-contact-info p i {
+        font-size: 1rem;
+    }
+}
+
+
+/* === NAVBAR STYLING === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    /* Slightly reduced vertical padding for a sleeker look */
+    /* Darker, more refined background, consistent with other sections */
+    background: linear-gradient(90deg, #0D1B2A 0%, #172A3A 100%);
+    color: white;
+    flex-wrap: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    /* Subtle shadow for depth */
+    position: sticky;
+    /* Make it sticky */
+    top: 0;
+    /* Stick to the top */
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it stays on top of other content */
+    font-family: 'Inter', sans-serif;
+    /* Consistent font */
+}
+
+.logo {
+    font-size: 1.8rem;
+    /* Slightly larger logo */
+    font-weight: 700;
+    /* Bolder font weight */
+    color: #60a5fa;
+    /* Use the accent blue for the logo */
+    text-transform: uppercase;
+    /* Make it uppercase for a strong brand presence */
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* Increased gap between links for better spacing */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #E0E0E0;
+    /* Slightly off-white for main links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    /* Adjusted padding */
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
+    border-radius: 6px;
+    /* Subtle rounded corners */
+}
+
+.nav-links a:hover {
+    color: #FFFFFF;
+    /* White text on hover */
+    background-color: rgba(96, 165, 250, 0.2);
+    /* Accent blue background with transparency */
+    /* Optional: A very subtle text shadow for pop */
+    /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); */
+}
+
+/* Base button styles - apply to all .btn classes */
+.btn {
+    padding: 10px 20px;
+    /* More generous padding for buttons */
+    border: 2px solid;
+    /* Use border for style */
+    border-radius: 25px;
+    /* More rounded pill shape */
+    cursor: pointer;
+    font-weight: 600;
+    /* Bolder text */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    /* Smooth transitions for all properties */
+    font-size: 0.95rem;
+    /* Consistent button font size */
+    text-align: center;
+    display: inline-block;
+    /* Ensure padding and width work as expected */
+}
+
+/* Login Button */
+.btn.login {
+    background-color: transparent;
+    color: #60a5fa;
+    /* Accent blue text */
+    border-color: #60a5fa;
+    /* Accent blue border */
+}
+
+.btn.login:hover {
+    background-color: #60a5fa;
+    /* Fill with accent blue on hover */
+    color: #FFFFFF;
+    /* White text on hover */
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.4);
+    /* Glow effect */
+}
+
+/* Sign Up Button */
+.btn.signup {
+    background-color: #60a5fa;
+    /* Solid accent blue */
+    color: white;
+    border-color: #60a5fa;
+    /* Accent blue border */
+}
+
+.btn.signup:hover {
+    background-color: #4f8cf0;
+    /* Slightly darker blue on hover */
+    box-shadow: 0 5px 15px rgba(96, 165, 250, 0.4);
+    /* Glow effect */
+    transform: translateY(-2px);
+    /* Slight lift */
+}
+
+/* Logout Button */
+.btn.logout {
+    background-color: #e74c3c;
+    /* Red color for logout */
+    color: white;
+    border-color: #e74c3c;
+}
+
+.btn.logout:hover {
+    background-color: #c0392b;
+    /* Darker red on hover */
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    /* Red glow effect */
+}
+
+/* Welcome User Text */
+.welcome-user {
+    /* Changed from #welcome-user to .welcome-user for consistency */
+    font-weight: 600;
+    color: #a0d1ff;
+    /* A slightly lighter blue for welcome text */
+    margin-right: 5px;
+    /* Add some space before buttons */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+/* Cart Count */
+#cart-count {
+    font-weight: bold;
+    margin-left: 5px;
+    background-color: #e74c3c;
+    /* Red background for cart count */
+    color: white;
+    border-radius: 50%;
+    /* Circular badge */
+    padding: 2px 7px;
+    /* Adjust padding for a small badge */
+    font-size: 0.8em;
+    /* Smaller font size for the count */
+    vertical-align: super;
+    /* Position it higher */
+}
+
+/* Media Queries for Navbar Responsiveness */
+@media (max-width: 1024px) {
+
+    /* Adjust for larger tablets/laptops */
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a,
+    .btn {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Mobile Menu (hamburger icon usually) */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        /* This section would typically hide the links and show a hamburger icon */
+        /* For this example, we'll just make them stack/wrap */
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        /* Position below navbar */
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #0D1B2A 0%, #172A3A 100%);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        display: none;
+        /* Hide by default, would be toggled by a hamburger menu */
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        /* Class to show the menu when hamburger is clicked */
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links a,
+    .btn {
+        width: 100%;
+        padding: 10px;
+        justify-content: flex-start;
+        /* Align text to left */
+    }
+
+    /* You would typically add a hamburger icon here and JavaScript to toggle .nav-links.active */
+}
+
+/* === Products Page === */
+.products-page-wrapper {
+    /* NEW WRAPPER CLASS */
+    background: linear-gradient(135deg, #1A232F 0%, #08101C 100%);
+    /* Dark gradient */
+    color: #E0E0E0;
+    /* Light text color for the page */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding-bottom: 0px;
+    /* Ensure space before footer */
+}
+
+/* Optional: Subtle background pattern for texture (consistent with Hero/About) */
+.products-page-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.products-page-intro {
+    text-align: center;
+    padding: 80px 20px 40px;
+    /* Adjusted padding for dark sections */
+    background-color: transparent;
+    /* No background color, use parent gradient */
+    border-bottom: none;
+    /* No border-bottom */
+    position: relative;
+    /* For z-index */
+    z-index: 2;
+}
+
+.products-page-intro h2 {
+    font-size: 2.8rem;
+    /* Larger heading like other sections */
+    color: #F8F8F8;
+    /* White heading */
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.products-page-intro p {
+    font-size: 1.15rem;
+    color: #B0B0B0;
+    /* Light gray for description */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.category-filter-section {
+    text-align: center;
+    margin: 3rem auto;
+    /* Adjusted margin */
+    max-width: 1200px;
+    /* Constrain width */
+    padding: 0 20px;
+    position: relative;
+    /* For z-index */
+    z-index: 2;
+}
+
+.category-filter-section h3 {
+    font-size: 1.8rem;
+    /* Prominent filter heading */
+    color: #BAD6EB;
+    /* Soft blue-white */
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    /* Increased gap */
+    margin-top: 1rem;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    /* Increased padding for buttons */
+    background-color: #304050;
+    /* Darker button background */
+    color: #E0E0E0;
+    /* Light text */
+    border: 1px solid #4a627a;
+    /* Subtle border */
+    border-radius: 8px;
+    /* More rounded */
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: #60a5fa;
+    /* Accent blue on hover/active */
+    color: white;
+    border-color: #60a5fa;
+    /* Accent blue border */
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+    /* Subtle glow */
+    transform: translateY(-2px);
+}
+
+.masonry-products {
+    padding: 0 20px 80px;
+    /* Adjusted padding, especially bottom */
+    position: relative;
+    /* For z-index */
+    z-index: 2;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* Slightly larger min-width */
+    gap: 30px;
+    /* Increased gap */
+    max-width: 1200px;
+    /* Consistent max-width with other sections */
+    margin: 0 auto;
+}
+
+.masonry-item {
+    background-color: #1A2E3F;
+    /* Darker card background */
+    border-radius: 12px;
+    /* More rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    /* Pronounced shadow */
+    padding: 1.5rem;
+    /* Increased padding */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally within card */
+    text-align: center;
+    /* Center text */
+}
+
+.masonry-item:hover {
+    transform: translateY(-8px);
+    /* Lift more on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    /* More intense shadow */
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 220px;
+    /* Slightly taller images */
+    object-fit: cover;
+    border-radius: 8px;
+    /* Match card rounding */
+    margin-bottom: 15px;
+    /* Space below image */
+}
+
+.masonry-item h3 {
+    font-size: 1.6rem;
+    /* Larger title */
+    color: #F8F8F8;
+    /* White title */
+    margin-bottom: 0.5rem;
+    /* Reduced margin */
+    line-height: 1.3;
+}
+
+.masonry-item p {
+    /* Added style for description paragraph */
+    font-size: 1rem;
+    color: #B0B0B0;
+    /* Light gray for description */
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    /* Allows description to take available space */
+}
+
+.masonry-item .price {
+    font-size: 1.3rem;
+    /* Larger price */
+    color: #00b894;
+    /* Green accent for price (consistent with some original button) */
+    font-weight: 700;
+    margin: 0.75rem 0;
+}
+
+.masonry-item button {
+    /* CORRECTED: Use the consistent accent blue */
+    background-color: #60a5fa;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* CORRECTED: Shadow consistent with accent blue */
+    box-shadow: 0 4px 10px rgba(96, 165, 250, 0.3);
+    width: auto;
+    display: inline-block;
+}
+
+.masonry-item button:hover {
+    /* CORRECTED: Darker accent blue on hover */
+    background-color: #4f8cf0;
+    transform: translateY(-2px);
+    /* CORRECTED: Enhanced shadow consistent with accent blue */
+    box-shadow: 0 6px 15px rgba(96, 165, 250, 0.6);
+}
+
+
+.category-label {
+    font-size: 0.85rem;
+    /* Slightly larger */
+    font-weight: bold;
+    color: #90A4AE;
+    /* Lighter gray for better visibility on dark background */
+    margin-bottom: 0.5rem;
+    /* More space */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Adjustments for Products Page */
+@media (max-width: 1024px) {
+    .products-page-intro {
+        padding: 60px 15px 30px;
+    }
+
+    .products-page-intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .products-page-intro p {
+        font-size: 1rem;
+    }
+
+    .category-filter-section {
+        margin: 2rem auto;
+    }
+
+    .masonry-grid {
+        gap: 25px;
+    }
+
+    .masonry-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .masonry-item .price {
+        font-size: 1.2rem;
+    }
+
+    .masonry-item button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-page-intro {
+        padding: 40px 15px 20px;
+    }
+
+    .products-page-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .products-page-intro p {
+        font-size: 0.95rem;
+    }
+
+    .category-filter-section {
+        padding: 0 15px;
+        margin-bottom: 2rem;
+    }
+
+    .category-filter-section h3 {
+        font-size: 1.5rem;
+    }
+
+    .category-buttons {
+        gap: 10px;
+    }
+
+    .category-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .masonry-products {
+        padding: 0 15px 60px;
+    }
+
+    .masonry-grid {
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+    }
+
+    .masonry-item {
+        padding: 1.2rem;
+    }
+
+    .masonry-item img {
+        height: 200px;
+    }
+
+    .masonry-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .masonry-item .price {
+        font-size: 1.1rem;
+    }
+
+    .masonry-item button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        width: 80%;
+        /* Make button wider on mobile */
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-page-intro h2 {
+        font-size: 1.6rem;
+    }
+
+    .category-filter-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .masonry-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .masonry-item .price {
+        font-size: 1rem;
+    }
+
+    .category-btn {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
+
+
+
+/* === Responsive Adjustments for Navbar === */
+/* Hamburger menu button - hidden by default on large screens */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure it's above other elements */
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    z-index: 999;
+    /* Below the sidebar, above main content */
+    display: none;
+    /* Hidden by default */
+}
+
+/* Media Query for smaller screens (max-width 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        /* Revert flex-direction to row to align logo and hamburger */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        /* Slightly less padding */
+    }
+
+    .navbar .nav-links {
+        /* Sidebar styling */
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* Start off-screen to the left */
+        width: 250px;
+        /* Width of the sidebar */
+        max-width: 80vw;
+        /* Max width for very small screens */
+        height: 100%;
+        background-color: #1a1a2e;
+        /* Same as navbar background */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1.5rem;
+        transform: translateX(-100%);
+        /* Initially hide it off-screen */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        /* Ensure it's on top */
+    }
+
+    .navbar .nav-links.open {
+        transform: translateX(0);
+        /* Slide in when 'open' class is applied */
+    }
+
+    .navbar .nav-links li {
+        margin: 10px 0;
+        /* More spacing for vertical links */
+        width: 100%;
+        /* Make list items take full width */
+    }
+
+    .navbar .nav-links a,
+    .navbar .nav-links .btn {
+        width: 100%;
+        /* Make links and buttons take full width */
+        text-align: left;
+        padding: 10px 0;
+        /* Adjust padding for full-width links */
+    }
+
+    .navbar .btn.login,
+    .navbar .btn.signup,
+    .navbar .btn.logout {
+        display: block;
+        /* Ensure buttons behave as blocks */
+    }
+
+    .navbar .nav-links .welcome-user {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+
+    /* Show the hamburger menu icon */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* === Other responsive adjustments === */
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-modal {
+        width: 100%;
+    }
+}
+
+/* --- Payment Success Styles (Dark Theme Compatible) --- */
+.payment-success-body {
+    /* Changed from #e6ffe6 to a dark gradient consistent with your site */
+    background: linear-gradient(135deg, #1A232F 0%, #08101C 100%);
+    font-family: 'Inter', sans-serif;
+    /* Consistent font */
+    color: #E0E0E0;
+    /* Light text color for the body */
+    min-height: 100vh;
+    /* Ensure it takes full viewport height */
+    display: flex;
+    /* Use flex to center the container */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.payment-success-container {
+    text-align: center;
+    padding: 40px;
+    /* Increased padding */
+    max-width: 600px;
+    margin: 20px;
+    /* Adjust margin for smaller screens */
+    /* Darker background for the container to fit the theme */
+    background-color: #1A2E3F;
+    border-radius: 12px;
+    /* More pronounced shadow on dark background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    /* For the background pattern */
+    z-index: 2;
+    /* Above pattern */
+}
+
+.payment-success-container::before {
+    /* Optional: subtle pattern */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.payment-success-container h1 {
+    color: #00b894;
+    /* A vibrant green (similar to your price color) */
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-success-container p {
+    color: #B0B0B0;
+    /* Light gray for general text */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-success-container p a {
+    color: #60a5fa;
+    /* Use your accent blue for links */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-success-container p a:hover {
+    color: #4f8cf0;
+    text-decoration: underline;
+}
+
+
+/* --- Payment Cancelled Styles (Dark Theme Compatible) --- */
+.payment-cancelled-body {
+    /* Changed from #ffe6e6 to a dark gradient consistent with your site */
+    background: linear-gradient(135deg, #1A232F 0%, #08101C 100%);
+    font-family: 'Inter', sans-serif;
+    /* Consistent font */
+    color: #E0E0E0;
+    /* Light text color for the body */
+    min-height: 100vh;
+    /* Ensure it takes full viewport height */
+    display: flex;
+    /* Use flex to center the container */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.payment-cancelled-container {
+    text-align: center;
+    padding: 40px;
+    /* Increased padding */
+    max-width: 600px;
+    margin: 20px;
+    /* Adjust margin for smaller screens */
+    /* Darker background for the container to fit the theme */
+    background-color: #1A2E3F;
+    border-radius: 12px;
+    /* More pronounced shadow on dark background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    position: relative;
+    /* For the background pattern */
+    z-index: 2;
+    /* Above pattern */
+}
+
+.payment-cancelled-container::before {
+    /* Optional: subtle pattern */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Cpath d="M0 0h30v30H0V0zm30 30h30v30H30V30z"/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.payment-cancelled-container h1 {
+    color: #ef4444;
+    /* Tailwind red-500, a strong, clear red */
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-cancelled-container p {
+    color: #B0B0B0;
+    /* Light gray for general text */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-cancelled-container p a {
+    color: #60a5fa;
+    /* Use your accent blue for links */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.payment-cancelled-container p a:hover {
+    color: #4f8cf0;
+    text-decoration: underline;
+}
+
+
+/* Responsive adjustments for both containers */
+@media (max-width: 768px) {
+
+    .payment-success-container,
+    .payment-cancelled-container {
+        padding: 30px 20px;
+    }
+
+    .payment-success-container h1,
+    .payment-cancelled-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .payment-success-container p,
+    .payment-cancelled-container p {
+        font-size: 1rem;
+    }
+}
+
+/* 
+.robot-iframe {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #0a0808;
+    border-radius: 12px;
+    margin: 20px 0;
+} */
+
+#services-section,
+#blog-section,
+#contact {
+    scroll-margin-top: 100px;
+    /* Adjust based on your navbar height */
+}
+
+/* Custom Message Box Styles (Light-themed to stand out, which is acceptable) -SIgnup*/
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeInOut 5s forwards;
+    /* Fade in and out */
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message-box.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+/* CORRECTED: Removed duplicate styling block for .cart-item-detail and .remove-from-cart-btn.
+   The previous block (within Side Cart Modal section) already covers these styles. */
+
+/* Style for disabled buttons */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Fallback image styling (for when image not found) */
+.masonry-item img {
+    display: block;
+}
+
+@tailwind utilities;
+/* Ensure this is present and processed by Tailwind */
+
+@layer utilities {
+    .scrollbar-thin {
+        scrollbar-width: thin;
+    }
+
+    /* This targets the thumb. The track is usually the background of the element itself. */
+    .scrollbar-thumb-gray-600 {
+        scrollbar-color: #4b5563 transparent;
+        /* Thumb color, then track color */
+    }
+}
+
+/* Tailwind-compatible custom scrollbar using ::-webkit-scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    /* gray-600 */
+    border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+    /* gray-500 */
+}
+
+/* PASSWORD TOGGLE STYLING */
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+    /* Room for eye icon */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+/* CORRECTED: FORM CONTAINER STYLING (Adjusted for Dark Theme) */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: #1A2E3F;
+    /* Darker background, consistent with cards */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    /* Darker shadow */
+    color: #140202;
+    /* Light text for form labels/text */
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #F8F8F8;
+    /* White heading */
+}
+
+.form-container form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #26384C;
+    /* Slightly lighter dark for input fields */
+    border: 1px solid #4a627a;
+    /* Subtle border */
+    color: #E0E0E0;
+    /* Light text for input */
+    border-radius: 4px;
+}
+
+.form-container form input::placeholder {
+    color: #B0B0B0;
+    /* Light gray placeholder text */
+}
+
+.form-container form button {
+    width: 100%;
+    background-color: #60a5fa;
+    /* Accent blue button */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container form button:hover {
+    background-color: #4f8cf0;
+    /* Darker accent blue on hover */
+    box-shadow: 0 4px 12px rgba(96, 165, 250, 0.4);
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 15px;
+    color: #B0B0B0;
+    /* Light gray for paragraph text */
+}
+
+.form-container p a {
+    color: #60a5fa;
+    /* Accent blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-container p a:hover {
+    color: #4f8cf0;
+    text-decoration: underline;
+}
+
+/* In your src/index.css or a global stylesheet  - RobotLabPage.jsx*/
+.sidebar-always-scroll {
+    overflow-y: scroll;
+}
+
+
+:root {
+    /* Core Dark Theme Colors (from tailwind.config.cjs mapping) */
+    --dark-bg-primary: #1A202C;
+    --dark-bg-secondary: #2D3748;
+    --dark-bg-tertiary: #4A5568;
+    --dark-text-light: #E2E8F0;
+    --dark-text-muted: #A0AEC0;
+    --dark-accent-blue: #63B3ED;
+    --dark-border-dark: #4A5568;
+    --dark-bg-tertiary-hover: #5a6478;
+
+    --dark-accent-blue-hover: #4299E1;
+      
+        --button-start-bg: #22c55e;
+        /* Tailwind green-600 */
+        --button-start-bg-hover: #16a34a;
+        /* Tailwind green-700 */
+
+        --button-stop-bg: #ef4444;
+        /* Tailwind red-600 */
+        --button-stop-bg-hover: #dc2626;
+        /* Tailwind red-700 */
+
+        --button-play-bg: #2563eb;
+        /* Tailwind blue-600 */
+        --button-play-bg-hover: #1d4ed8;
+        /* Tailwind blue-700 */
+
+        --button-save-bg: #eab308;
+        /* Tailwind yellow-600 */
+        --button-save-bg-hover: #ca8a04;
+        /* Tailwind yellow-700 */
+
+        --button-disabled-bg: #6b7280;
+        /* Tailwind gray-500 */
+        --button-disabled-text: #d1d5db;
+        --dark-accent-blue: #63B3ED;
+            --dark-bg-tertiary: #4A5568;
+            /* For slider track background */
+  
+}
+
+
+.image-not-found {
+    width: 100%;
+    height: 200px;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}

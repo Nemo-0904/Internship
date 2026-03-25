@@ -1,0 +1,387 @@
+[
+  {
+    "name": "8x8 MU Multiboard Core Tile",
+    "stl_files": [
+      {
+        "name": "8x8 MU Multiboard Core Tile",
+        "filename": "8x8_MU_Multiboard_Core_Tile.stl"
+      }
+    ]
+  },
+  {
+    "name": "Anatomically Correct Human Skull  Homo Sapiens Sapiens",
+    "stl_files": [
+      {
+        "name": "HumanSkull Hex Pin 4mm 01",
+        "filename": "HumanSkull_Hex_Pin_4mm_01.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 02",
+        "filename": "HumanSkull_Hex_Pin_4mm_02.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 03",
+        "filename": "HumanSkull_Hex_Pin_4mm_03.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 04",
+        "filename": "HumanSkull_Hex_Pin_4mm_04.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 05",
+        "filename": "HumanSkull_Hex_Pin_4mm_05.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 06",
+        "filename": "HumanSkull_Hex_Pin_4mm_06.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 07",
+        "filename": "HumanSkull_Hex_Pin_4mm_07.stl"
+      },
+      {
+        "name": "HumanSkull Hex Pin 4mm 08",
+        "filename": "HumanSkull_Hex_Pin_4mm_08.stl"
+      },
+      {
+        "name": "HumanSkull Jaw",
+        "filename": "HumanSkull_Jaw.stl"
+      },
+      {
+        "name": "HumanSkull Jaw Pin 01",
+        "filename": "HumanSkull_Jaw_Pin_01.stl"
+      },
+      {
+        "name": "HumanSkull Jaw Pin 02",
+        "filename": "HumanSkull_Jaw_Pin_02.stl"
+      },
+      {
+        "name": "HumanSkull Skull 01",
+        "filename": "HumanSkull_Skull_01.stl"
+      },
+      {
+        "name": "HumanSkull Skull 02",
+        "filename": "HumanSkull_Skull_02.stl"
+      }
+    ]
+  },
+  {
+    "name": "Collapsing Drill Sword Print-in-Place",
+    "stl_files": [
+      {
+        "name": "DRILL SWORD PNP",
+        "filename": "DRILL_SWORD_PNP.stl"
+      }
+    ]
+  },
+  {
+    "name": "Dasai Mochi Robot Body",
+    "stl_files": [
+      {
+        "name": "ARMS",
+        "filename": "ARMS.stl"
+      },
+      {
+        "name": "backpack",
+        "filename": "backpack.stl"
+      },
+      {
+        "name": "body",
+        "filename": "body.stl"
+      },
+      {
+        "name": "legs",
+        "filename": "legs.stl"
+      }
+    ]
+  },
+  {
+    "name": "Gridfinity Baseplates",
+    "stl_files": [
+      {
+        "name": "Frame 1x2",
+        "filename": "Frame_1x2.stl"
+      },
+      {
+        "name": "Frame 1x3",
+        "filename": "Frame_1x3.stl"
+      },
+      {
+        "name": "Frame 1x4",
+        "filename": "Frame_1x4.stl"
+      },
+      {
+        "name": "Frame 1x5",
+        "filename": "Frame_1x5.stl"
+      },
+      {
+        "name": "Frame 1x6",
+        "filename": "Frame_1x6.stl"
+      },
+      {
+        "name": "Frame 1x7",
+        "filename": "Frame_1x7.stl"
+      },
+      {
+        "name": "Frame 2x2",
+        "filename": "Frame_2x2.stl"
+      },
+      {
+        "name": "Frame 2x3",
+        "filename": "Frame_2x3.stl"
+      },
+      {
+        "name": "Frame 2x4",
+        "filename": "Frame_2x4.stl"
+      },
+      {
+        "name": "Frame 2x5",
+        "filename": "Frame_2x5.stl"
+      },
+      {
+        "name": "Frame 2x6",
+        "filename": "Frame_2x6.stl"
+      },
+      {
+        "name": "Frame 2x7",
+        "filename": "Frame_2x7.stl"
+      },
+      {
+        "name": "Frame 3x3",
+        "filename": "Frame_3x3.stl"
+      },
+      {
+        "name": "Frame 3x4",
+        "filename": "Frame_3x4.stl"
+      },
+      {
+        "name": "Frame 3x5",
+        "filename": "Frame_3x5.stl"
+      },
+      {
+        "name": "Frame 3x6",
+        "filename": "Frame_3x6.stl"
+      },
+      {
+        "name": "Frame 3x7",
+        "filename": "Frame_3x7.stl"
+      },
+      {
+        "name": "Frame 4x4",
+        "filename": "Frame_4x4.stl"
+      },
+      {
+        "name": "Frame 4x5",
+        "filename": "Frame_4x5.stl"
+      },
+      {
+        "name": "Frame 4x6",
+        "filename": "Frame_4x6.stl"
+      },
+      {
+        "name": "Frame 4x7",
+        "filename": "Frame_4x7.stl"
+      },
+      {
+        "name": "Frame 5x5",
+        "filename": "Frame_5x5.stl"
+      },
+      {
+        "name": "Frame 5x6",
+        "filename": "Frame_5x6.stl"
+      },
+      {
+        "name": "Frame 5x7",
+        "filename": "Frame_5x7.stl"
+      },
+      {
+        "name": "Frame 6x6",
+        "filename": "Frame_6x6.stl"
+      },
+      {
+        "name": "Frame 6x7",
+        "filename": "Frame_6x7.stl"
+      },
+      {
+        "name": "Frame 7x7",
+        "filename": "Frame_7x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x1 (super cute)",
+        "filename": "Weighted_Baseplate_1x1_(super_cute).stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x2",
+        "filename": "Weighted_Baseplate_1x2.stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x3",
+        "filename": "Weighted_Baseplate_1x3.stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x4",
+        "filename": "Weighted_Baseplate_1x4.stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x5",
+        "filename": "Weighted_Baseplate_1x5.stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x6",
+        "filename": "Weighted_Baseplate_1x6.stl"
+      },
+      {
+        "name": "Weighted Baseplate 1x7",
+        "filename": "Weighted_Baseplate_1x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 2x2",
+        "filename": "Weighted_Baseplate_2x2.stl"
+      },
+      {
+        "name": "Weighted Baseplate 2x3",
+        "filename": "Weighted_Baseplate_2x3.stl"
+      },
+      {
+        "name": "Weighted Baseplate 2x4",
+        "filename": "Weighted_Baseplate_2x4.stl"
+      },
+      {
+        "name": "Weighted Baseplate 2x5",
+        "filename": "Weighted_Baseplate_2x5.stl"
+      },
+      {
+        "name": "Weighted Baseplate 2x6",
+        "filename": "Weighted_Baseplate_2x6.stl"
+      },
+      {
+        "name": "Weighted Baseplate 2x7",
+        "filename": "Weighted_Baseplate_2x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 3x3",
+        "filename": "Weighted_Baseplate_3x3.stl"
+      },
+      {
+        "name": "Weighted Baseplate 3x4",
+        "filename": "Weighted_Baseplate_3x4.stl"
+      },
+      {
+        "name": "Weighted Baseplate 3x5",
+        "filename": "Weighted_Baseplate_3x5.stl"
+      },
+      {
+        "name": "Weighted Baseplate 3x6",
+        "filename": "Weighted_Baseplate_3x6.stl"
+      },
+      {
+        "name": "Weighted Baseplate 3x7",
+        "filename": "Weighted_Baseplate_3x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 4x4",
+        "filename": "Weighted_Baseplate_4x4.stl"
+      },
+      {
+        "name": "Weighted Baseplate 4x5",
+        "filename": "Weighted_Baseplate_4x5.stl"
+      },
+      {
+        "name": "Weighted Baseplate 4x6",
+        "filename": "Weighted_Baseplate_4x6.stl"
+      },
+      {
+        "name": "Weighted Baseplate 4x7",
+        "filename": "Weighted_Baseplate_4x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 5x5",
+        "filename": "Weighted_Baseplate_5x5.stl"
+      },
+      {
+        "name": "Weighted Baseplate 5x6",
+        "filename": "Weighted_Baseplate_5x6.stl"
+      },
+      {
+        "name": "Weighted Baseplate 5x7",
+        "filename": "Weighted_Baseplate_5x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 6x6",
+        "filename": "Weighted_Baseplate_6x6.stl"
+      },
+      {
+        "name": "Weighted Baseplate 6x7",
+        "filename": "Weighted_Baseplate_6x7.stl"
+      },
+      {
+        "name": "Weighted Baseplate 7x7",
+        "filename": "Weighted_Baseplate_7x7.stl"
+      }
+    ]
+  },
+  {
+    "name": "KROMATIK Vase 001",
+    "stl_files": [
+      {
+        "name": "KROMATIK 001 1.2mm",
+        "filename": "KROMATIK_001_1.2mm.stl"
+      },
+      {
+        "name": "KROMATIK 001 vase",
+        "filename": "KROMATIK_001_vase.stl"
+      }
+    ]
+  },
+  {
+    "name": "Raised Double-Sided Snap  DS Part B",
+    "stl_files": [
+      {
+        "name": "Raised Double-Sided Snap (DS Part B) - Loose",
+        "filename": "Raised_Double-Sided_Snap_(DS_Part_B)_-_Loose.stl"
+      },
+      {
+        "name": "Raised Double-Sided Snap (DS Part B) - Permanent",
+        "filename": "Raised_Double-Sided_Snap_(DS_Part_B)_-_Permanent.stl"
+      },
+      {
+        "name": "Raised Double-Sided Snap (DS Part B) - Standard",
+        "filename": "Raised_Double-Sided_Snap_(DS_Part_B)_-_Standard.stl"
+      },
+      {
+        "name": "Raised Double-Sided Snap (DS Part B) - Tight",
+        "filename": "Raised_Double-Sided_Snap_(DS_Part_B)_-_Tight.stl"
+      }
+    ]
+  },
+  {
+    "name": "Raised Dual Snap  DS Part B",
+    "stl_files": [
+      {
+        "name": "Raised Dual Snap Loose",
+        "filename": "Raised_Dual_Snap_Loose.stl"
+      },
+      {
+        "name": "Raised Dual Snap Permanent",
+        "filename": "Raised_Dual_Snap_Permanent.stl"
+      },
+      {
+        "name": "Raised Dual Snap Standard",
+        "filename": "Raised_Dual_Snap_Standard.stl"
+      },
+      {
+        "name": "Raised Dual Snap Tight",
+        "filename": "Raised_Dual_Snap_Tight.stl"
+      }
+    ]
+  },
+  {
+    "name": "Robotic Hand",
+    "stl_files": [
+      {
+        "name": "robotic hand",
+        "filename": "robotic_hand.stl"
+      }
+    ]
+  }
+]

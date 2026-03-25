@@ -1,0 +1,57 @@
+/* frontend/src/styles/CameraView.css */
+
+.camera-view-container {
+    /* Padding around the video feed, equivalent to Tailwind's p-2 (0.5rem * 16px = 8px) */
+    padding: 0.5rem;
+    /* Centers inline-level content horizontally */
+    text-align: center;
+    /* Background color consistent with a dark theme secondary element */
+    background-color: var(--dark-bg-secondary);
+    /* Rounded corners, equivalent to Tailwind's rounded-md (0.5rem * 16px = 8px) */
+    border-radius: 0.5rem;
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Adds space below the component if it's part of a vertical flow */
+    margin-bottom: 1rem;
+}
+
+.camera-view-title {
+    /* Font size for the title, equivalent to Tailwind's text-base (1rem * 16px = 16px) */
+    font-size: 1rem;
+    /* Margin below the title, slightly less than 0.5rem */
+    margin-bottom: 0.375rem;
+    /* Light text color for headings in a dark theme */
+    color: var(--dark-text-light);
+    /* Slightly bolder font weight */
+    font-weight: 600;
+}
+
+.camera-video-feed {
+    /* Rounded corners for the video element itself */
+    border-radius: 0.5rem;
+    /* A thin, dark border for visual separation */
+    border: 1px solid var(--dark-border-dark);
+    /* Ensures the video behaves as a block element for margin auto */
+    display: block;
+    /* Centers the video horizontally within its parent */
+    margin: 0 auto;
+    /* Ensures the video scales down and doesn't exceed its container's width */
+    max-width: 100%;
+    /* Maintains the video's aspect ratio when scaling */
+    height: auto;
+    /* Ensures the video covers the available space without distortion, if used in a flexible layout */
+    object-fit: cover;
+    /* Background color when video is not loaded or has transparent areas */
+    background-color: black;
+    /* Inherit border-radius from parent, useful if .camera-view-container applies it */
+    border-radius: inherit;
+    /* If this class is specifically for the stream within an absolute positioned parent, these are critical */
+    position: absolute;
+    /* Needed if parent is relatively positioned and this fills it */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none !important;
+    
+}

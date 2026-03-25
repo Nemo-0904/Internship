@@ -1,0 +1,67 @@
+
+[
+  {
+    "id": "prod_explorer_rover",
+    "name": "Explorer Rover",
+    "description": "For rough terrain and GPS navigation.",
+    "price": 12000,
+    "image": "/images/image_be2a7d.jpg",
+    "category": "Autonomous Robots"
+  },
+  {
+    "id": "prod_mini_delivery_bot",
+    "name": "Mini Delivery Bot",
+    "description": "Indoor autonomous robot with object detection.",
+    "price": 4000,
+    "image": "/images/image_b439ba.jpg",
+    "category": "Autonomous Robots"
+  },
+  {
+    "id": "prod_line_follower_kit_1",
+    "name": "Line Follower Kit",
+    "description": "DIY educational robot kit. Perfect for beginners in electronics and robotics. Easy to assemble, with IR sensors and Arduino control system support.",
+    "price": 30000,
+    "image": "/images/image_b3bd73.jpg",
+    "category": "Educational Kits"
+  },
+  {
+    "id": "prod_line_follower_kit_2",
+    "name": "Line Follower Kit (Advanced)",
+    "description": "DIY educational robot kit. Perfect for beginners in electronics and robotics. Easy to assemble, with IR sensors and Arduino control system support.",
+    "price": 344000,
+    "image": "/images/image_b3bd73.jpg",
+    "category": "Educational Kits"
+  },
+  {
+    "id": "prod_mini_delivery_bot_2",
+    "name": "Mini Delivery Bot (Pro)",
+    "description": "Indoor autonomous robot with object detection.",
+    "price": 45000,
+    "image": "/images/image_b439ba.jpg",
+    "category": "Autonomous Robots"
+  },
+  {
+    "id": "prod_explorer_rover_2",
+    "name": "Explorer Rover (Pro)",
+    "description": "For rough terrain and GPS navigation.",
+    "price": 45000,
+    "image": "/images/image_be2a7d.jpg",
+    "category": "Autonomous Robots"
+  },
+  {
+    "id": "prod_industrial_arm",
+    "name": "Industrial Robotic Arm",
+    "description": "High-precision arm for manufacturing and assembly.",
+    "price": 250000,
+    "image": "https://placehold.co/400x300/E3F2FD/1A237E?text=Industrial+Arm",
+    "category": "Industrial Robots"
+  },
+  {
+    "id": "prod_ai_vision_module",
+    "name": "AI Vision Module",
+    "description": "Advanced AI module for object recognition and tracking.",
+    "price": 15000,
+    "image": "https://placehold.co/400x300/FCE4EC/C2185B?text=AI+Vision+Module",
+    "category": "AI Modules"
+  }
+]

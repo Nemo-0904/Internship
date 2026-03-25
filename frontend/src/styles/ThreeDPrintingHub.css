@@ -1,0 +1,144 @@
+/* --- Global & Wrapper --- */
+:root {
+  --primary-color: #3b82f6;
+  /* Modern Blue */
+  --bg-dark: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --transition: all 0.3s ease;
+}
+
+.hub-page-wrapper {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.hub-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hub-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  background: linear-gradient(to right, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Search Bar --- */
+.search-controls {
+  margin-bottom: 30px;
+}
+
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hub-search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  background-color: var(--card-bg);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: var(--transition);
+}
+
+.hub-search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.models-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* --- Product Grid --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 100px 0;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* --- Pagination --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid #334155;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  min-width: 40px;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #334155;
+  border-color: var(--text-muted);
+}
+
+.pagination button.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .hub-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .pagination button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}

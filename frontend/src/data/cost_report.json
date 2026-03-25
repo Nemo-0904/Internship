@@ -1,0 +1,26 @@
+[
+    {
+        "file": "robotic_hand.stl",
+        "volume_cm3": 469.14,
+        "materials": {
+            "PLA": {
+                "weight_g": 581.73,
+                "material_cost_inr": 436.3,
+                "shipping_cost_inr": 145.43,
+                "total_cost_inr": 581.73
+            },
+            "PETG": {
+                "weight_g": 595.81,
+                "material_cost_inr": 506.44,
+                "shipping_cost_inr": 148.95,
+                "total_cost_inr": 655.39
+            },
+            "TPU": {
+                "weight_g": 562.97,
+                "material_cost_inr": 562.97,
+                "shipping_cost_inr": 140.74,
+                "total_cost_inr": 703.71
+            }
+        }
+    }
+]

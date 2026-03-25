@@ -1,0 +1,78 @@
+/* frontend/src/components/CollapsibleSection.css */
+
+.collapsible-section {
+    margin-bottom: 8px;
+    /* Tighter spacing between sections */
+    border-radius: 6px;
+    /* Slightly rounded corners */
+    overflow: hidden;
+    /* Ensures content doesn't spill out of rounded corners */
+    background-color: var(--dark-bg-secondary);
+    /* Matches main panel background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Subtle dark shadow for depth */
+    border: 1px solid var(--dark-border-dark);
+    /* Subtle border */
+}
+
+.collapsible-button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    /* Comfortable padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-bg-tertiary);
+    /* Darker header background */
+    color: var(--dark-text-light);
+    /* Light text color */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Base font size for consistency */
+    font-weight: 600;
+    /* Semi-bold title */
+    transition: background-color 0.2s ease-in-out;
+    /* Smooth hover transition */
+}
+
+.collapsible-button:hover {
+    background-color: var(--dark-bg-tertiary-hover);
+    /* Slightly lighter on hover */
+}
+
+/* Custom CSS Variable for hover state */
+/* You'll need to define this variable somewhere if not using Tailwind directly. */
+/* For now, let's assume it can be derived or we'll adjust the color directly */
+/* For example, if dark-bg-tertiary is #4A5568, hover could be #5a6478 */
+
+
+.collapsible-button-icon {
+    width: 16px;
+    /* Icon size */
+    height: 16px;
+    /* Icon size */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth rotation */
+    color: var(--dark-text-light);
+    /* Icon color */
+}
+
+.collapsible-button-icon.open {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    padding: 12px 16px;
+    /* Matches header padding */
+    background-color: var(--dark-bg-secondary);
+    /* Content background */
+    color: var(--dark-text-light);
+    /* Content text color */
+    border-top: 1px solid var(--dark-border-dark);
+    /* Separator line */
+    /* Add transition for smooth open/close if needed, e.g., max-height */
+    /* For simple show/hide, opacity/visibility transitions are easier */
+}
+
