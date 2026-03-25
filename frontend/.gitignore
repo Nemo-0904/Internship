@@ -26,3 +26,8 @@ dist-ssr
 
 
 frontend 3/
+frontend/public/stl/
+*.zip
+*.obj
+*.3mf
+*.STEP

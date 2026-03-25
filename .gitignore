@@ -21,3 +21,5 @@ node_modules/
 *.stl
 *.STL
 frontend 3/
+
+frontend/public/stl/
