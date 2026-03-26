@@ -7,6 +7,11 @@ build/
 
 # Environment variables
 .env
+**/.env
+**/*.env
+
+# Test files with potential secrets
+Backend/test_connections.js
 
 # Logs
 npm-debug.log*
@@ -22,4 +27,7 @@ node_modules/
 *.STL
 frontend 3/
 
+
 frontend/public/stl/
+
+.env
